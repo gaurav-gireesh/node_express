@@ -1,0 +1,33 @@
+extends base_html
+
+
+block content
+    h1 User Registration:
+    form(method="POST",action="/users/register")
+        #form-group
+            label Name:&nbsp;
+            input.form-control(name='name',type="text",placeholder="Name..")
+            br
+            br
+        #form-group
+            label Email:&nbsp;
+            input.form-control(name='email',type="email",placeholder="Email..")
+            br
+            br
+        #form-group
+            label Username:&nbsp;
+            input.form-control(name='username',placeholder="Username",type="text")
+            br
+            br
+
+        #form-group
+            label Password:&nbsp;
+            input.form-control(name='password',placeholder="Password",type="password")
+            br
+
+        #form-group
+            label Confirm:&nbsp;
+            input.form-control(name='password2',placeholder="Type again...",type="password")
+            br
+        input.btn.btn-info(type='submit',value="Submit")
+

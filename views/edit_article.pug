@@ -1,0 +1,23 @@
+//- extends base_html
+
+
+block content
+    h1 Edit Article:
+    form(method="POST",action="/articles/edit/"+article._id)
+        #form-group
+            label Title:&nbsp;
+            input.form-control(name='title',type="text",value=article.name)
+            br
+            br
+        #form-group
+            label Author:&nbsp;
+            input.form-control(name='author',type="text",value=article.author)
+            br
+            br
+        #form-group
+            label Body:&nbsp;
+            textarea.form-control(name='body') #{article.body}
+            br
+            br
+        input.btn.btn-success(type='submit',value="Submit")
+

@@ -1,0 +1,21 @@
+extends base_html
+
+
+block content
+    h1 Login:
+    form(method="POST",action="/users/register")
+        
+        #form-group
+            label Username:&nbsp;
+            input.form-control(name='username',placeholder="Username",type="text")
+            br
+            br
+
+        #form-group
+            label Password:&nbsp;
+            input.form-control(name='password',placeholder="Password",type="password")
+            br
+
+         
+        input.btn.btn-info(type='submit',value="Submit")
+

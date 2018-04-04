@@ -1,0 +1,14 @@
+
+extends base_html
+block content
+    h1=article.name
+    hr
+    h4=article.body
+    hr
+    
+    p Written by : #{article.author}
+    hr
+
+    a.btn.btn-info(href="/articles/edit/"+article._id) Edit
+    hr
+    a.btn.btn-danger.delete-art(href="#",data-id=article._id) Delete

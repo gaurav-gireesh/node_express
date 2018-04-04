@@ -1,0 +1,23 @@
+extends base_html
+
+
+block content
+    h1 Add Article:
+    form(method="POST",action="/articles/add")
+        #form-group
+            label Title:&nbsp;
+            input.form-control(name='title',type="text",placeholder="Title..")
+            br
+            br
+        #form-group
+            label Author:&nbsp;
+            input.form-control(name='author',type="text",placeholder="Author..")
+            br
+            br
+        #form-group
+            label Body:&nbsp;
+            textarea.form-control(name='body',placeholder="Article body goes here..")
+            br
+            br
+        input.btn.btn-success(type='submit',value="Add")
+

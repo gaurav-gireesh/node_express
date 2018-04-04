@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        link(rel='stylesheet' type='text/css' href='/bower-components/bootstrap/dist/css/bootstrap.css')
+    body
+      
+    
+     
+        
+        .container
+            a.btn.btn-info(href="/users/register") Register &nbsp;
+            a.btn.btn-success(href="/users/login") &nbsp;Login &nbsp;
+
+            != messages('messages', locals) 
+            if errors
+                each error,i in errors
+                    div(class="alert alert-danger") #{error.msg}
+            block content
+            p
+            br
+            hr
+            footer
+                p Copyright &copy; The Work of gaurav! 1102 W, 29th Street, Los Angeles, 90007
+
+    script(src="/bower-components/jquery/dist/jquery.js")
+    script(src="/bower-components/bootstrap/dist/js/bootstrap.js")
+    script(src="/js/main.js")
